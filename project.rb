@@ -1,26 +1,12 @@
 class Project
   attr_accessor :name, :description, :owner
-  attr_reader :tasks
 
-  def initialize(name, description, owner)
+  def initialize name, desc
     @name = name
-    @description = description
-    @owner = owner
-    @tasks = []
+    @description = desc
   end
 
   def elevator_pitch
     "#{@name}, #{@description}"
   end
-
-
-  def add_tasks task
-    @tasks << task
-  end
-
-  def print_tasks
-  @tasks.each { |elem| puts elem }
-  end
-
-
 end
